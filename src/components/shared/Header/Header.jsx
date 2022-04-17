@@ -61,26 +61,42 @@ const Header = () => {
               Services
             </NavLink>
             <NavLink
-              to="/"
-              className="p-2 lg:px-4 md:mx-2 text-white rounded hover:bg-gray-200 hover:text-gray-700 transition-colors duration-300"
+              to="/checkout"
+              className={({ isActive }) =>
+                isActive
+                  ? "p-2 lg:px-4 md:mx-2 text-white rounded hover:bg-gray-200 hover:text-gray-500 bg-indigo-600"
+                  : "p-2 lg:px-4 md:mx-2 text-white rounded hover:bg-gray-200 hover:text-gray-500 "
+              }
             >
-              Pricing
+              Checkout
             </NavLink>
             <NavLink
               to="/"
-              className="p-2 lg:px-4 md:mx-2 text-white rounded hover:bg-gray-200 hover:text-gray-700 transition-colors duration-300"
+              className={({ isActive }) =>
+                isActive
+                  ? "p-2 lg:px-4 md:mx-2 text-white rounded hover:bg-gray-200 hover:text-gray-500 bg-indigo-600"
+                  : "p-2 lg:px-4 md:mx-2 text-white rounded hover:bg-gray-200 hover:text-gray-500 "
+              }
             >
               Contact
             </NavLink>
             <NavLink
-              to="/"
-              className="p-2 lg:px-4 md:mx-2 text-indigo-600 text-center border border-transparent rounded hover:bg-indigo-100 hover:text-indigo-700 transition-colors duration-300"
+              to="/login"
+              className={({ isActive }) =>
+                isActive
+                  ? "p-2 lg:px-4 md:mx-2 text-white bg-indigo-600 text-center border border-transparent rounded hover:bg-indigo-100 hover:text-indigo-700 transition-colors duration-300"
+                  : "p-2 lg:px-4 md:mx-2 text-indigo-600 text-center border border-transparent rounded hover:bg-indigo-100 hover:text-indigo-700 transition-colors duration-300 "
+              }
             >
               Login
             </NavLink>
             <NavLink
-              to="/"
-              className="p-2 lg:px-4 md:mx-2 text-indigo-600 text-center border border-solid border-indigo-600 rounded hover:bg-indigo-600 hover:text-white transition-colors duration-300 mt-1 md:mt-0 md:ml-1"
+              to="/register"
+              className={({ isActive }) =>
+                isActive
+                  ? "p-2 lg:px-4 md:mx-2  text-center border border-solid border-indigo-600 rounded  transition-colors duration-300 mt-1 md:mt-0 md:ml-1 bg-indigo-600 text-white"
+                  : "p-2 lg:px-4 md:mx-2 text-indigo-600 text-center border border-solid border-indigo-600 rounded  transition-colors duration-300 mt-1 md:mt-0 md:ml-1"
+              }
             >
               Signup
             </NavLink>
