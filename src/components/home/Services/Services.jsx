@@ -26,11 +26,11 @@ const Services = () => {
   };
   return (
     <>
-      <div className="my-10">
-        <h1 className="text-center mb-5 text-blue-500 font-semibold text-2xl">
+      <div className="my-16">
+        <h1 className="text-center my-10 font-semibold text-4xl">
           My Services
         </h1>
-        <div className="px-[10%] grid grid-cols-3 gap-5 ">
+        <div className="px-5 md:px-[10%] grid grid-cols-1 md:grid-cols-3 gap-5 ">
           {/* service 1   */}
           <div className="bg-[rgb(242,242,242)] ">
             <div>
