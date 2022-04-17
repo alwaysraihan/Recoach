@@ -27,6 +27,9 @@ const Services = () => {
   return (
     <>
       <div className="my-10">
+        <h1 className="text-center mb-5 text-blue-500 font-semibold text-2xl">
+          My Services
+        </h1>
         <div className="px-[10%] grid grid-cols-3 gap-5 ">
           {/* service 1   */}
           <div className="bg-[rgb(242,242,242)] ">
@@ -45,9 +48,11 @@ const Services = () => {
                   </h1>
                   <p className="mt-5 mb-2">{service1.description}</p>
                   <h2 className="mb-10">Price:$ {service1.price}</h2>
-                  <span className="bg-blue-500 text-white my-5 cursor-pointer text-center p-4 rounded">
-                    Checkout Now
-                  </span>
+                  <div className="mt-3 mb-5 ">
+                    <span className="bg-blue-500 text-white cursor-pointer text-center p-4 rounded">
+                      Checkout Now
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -62,9 +67,11 @@ const Services = () => {
                   </h1>
                   <p className="mt-5 mb-2">{service2.description}</p>
                   <h2 className="mb-10">Price:$ {service2.price}</h2>
-                  <span className="bg-blue-500 text-white my-5 cursor-pointer text-center p-4 rounded">
-                    Checkout Now
-                  </span>
+                  <div className="mt-3 mb-5 ">
+                    <span className="bg-blue-500 text-white cursor-pointer text-center p-4 rounded">
+                      Checkout Now
+                    </span>
+                  </div>
                 </div>
               </div>
               <div>
@@ -93,9 +100,11 @@ const Services = () => {
                   </h1>
                   <p className="mt-5 mb-2">{service3.description}</p>
                   <h2 className="mb-10">Price:$ {service3.price}</h2>
-                  <span className="bg-blue-500 text-white my-5 cursor-pointer text-center p-4 rounded">
-                    Checkout Now
-                  </span>
+                  <div className="mt-3 mb-5 ">
+                    <span className="bg-blue-500 text-white cursor-pointer text-center p-4 rounded">
+                      Checkout Now
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
