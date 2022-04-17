@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <>
       <div className=" py-2 md:py-4 bg-gray-800 text-white">
-        <div className="container  mx-auto md:flex md:items-center">
+        <div className="container px-4 md:px-0 lg:px-4  mx-auto md:flex md:items-center">
           <div className="flex justify-between items-center">
             <Link to="/" className="font-bold text-xl text-indigo-600">
               FWR
@@ -32,21 +32,33 @@ const Header = () => {
           >
             <NavLink
               to="/"
-              className="p-2 lg:px-4 md:mx-2 text-white rounded bg-indigo-600"
+              className={({ isActive }) =>
+                isActive
+                  ? "p-2 lg:px-4 md:mx-2 text-white rounded hover:bg-gray-200 hover:text-gray-500 bg-indigo-600"
+                  : "p-2 lg:px-4 md:mx-2 text-white rounded hover:bg-gray-200 hover:text-gray-500 "
+              }
             >
               Home
             </NavLink>
             <NavLink
-              to="/"
-              className="p-2 lg:px-4 md:mx-2 text-white rounded hover:bg-gray-200 hover:text-gray-700 transition-colors duration-300"
+              to="/about"
+              className={({ isActive }) =>
+                isActive
+                  ? "p-2 lg:px-4 md:mx-2 text-white rounded hover:bg-gray-200 hover:text-gray-500 bg-indigo-600"
+                  : "p-2 lg:px-4 md:mx-2 text-white rounded hover:bg-gray-200 hover:text-gray-500 "
+              }
             >
               About
             </NavLink>
             <NavLink
-              to="/"
-              className="p-2 lg:px-4 md:mx-2 text-white rounded hover:bg-gray-200 hover:text-gray-700 transition-colors duration-300"
+              to="services"
+              className={({ isActive }) =>
+                isActive
+                  ? "p-2 lg:px-4 md:mx-2 text-white rounded hover:bg-gray-200 hover:text-gray-500 bg-indigo-600"
+                  : "p-2 lg:px-4 md:mx-2 text-white rounded hover:bg-gray-200 hover:text-gray-500 "
+              }
             >
-              Features
+              Services
             </NavLink>
             <NavLink
               to="/"

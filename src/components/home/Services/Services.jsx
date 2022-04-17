@@ -30,7 +30,7 @@ const Services = () => {
         <h1 className="text-center my-10 font-semibold text-4xl">
           My Services
         </h1>
-        <div className="px-5 md:px-[10%] grid grid-cols-1 md:grid-cols-3 gap-5 ">
+        <div className="px-5 md:px-[4%] lg:px-[10%] grid grid-cols-1 md:grid-cols-3 gap-5 ">
           {/* service 1   */}
           <div className="bg-[rgb(242,242,242)] ">
             <div>
