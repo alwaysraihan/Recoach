@@ -1,13 +1,14 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const SignUp = () => {
   return (
     <>
-      <div className="flex justify-center items-center ">
+      <div className="flex justify-center items-center my-5 ">
         <div className="lg:w-2/5 md:w-1/2 w-full px-5 md:px-0">
           <form className="bg-white p-10 rounded-lg shadow-lg min-w-full">
             <h1 className="text-center text-2xl mb-6 text-gray-600 font-bold font-sans">
-              Formregister
+              Signup
             </h1>
             <div>
               <label
@@ -75,12 +76,16 @@ const SignUp = () => {
             >
               Register
             </button>
-            <button
-              type="submit"
-              className="w-full mt-6 mb-3 bg-indigo-100 rounded-lg px-4 py-2 text-lg text-gray-800 tracking-wide font-semibold font-sans"
-            >
-              Login
-            </button>
+            <p className="text-xl mt-4">
+              <span>
+                Already member?
+                <Link className="text-blue-500" to="/login">
+                  {" "}
+                  Login
+                </Link>{" "}
+                here.
+              </span>
+            </p>
           </form>
         </div>
       </div>
