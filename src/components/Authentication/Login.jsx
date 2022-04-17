@@ -1,13 +1,21 @@
 import React, { useState } from "react";
 import {
+  useSendPasswordResetEmail,
   useSignInWithEmailAndPassword,
   useSignInWithGithub,
   useSignInWithGoogle,
 } from "react-firebase-hooks/auth";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { toast, ToastContainer } from "react-toastify";
 import auth from "../../Firebase/firebase.init";
+import "react-toastify/dist/ReactToastify.css";
+import Loading from "../shared/Loading/Loading";
 
 const Login = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  let from = location.state?.from?.pathname || "/";
   const [userLoginData, setUserLoginData] = useState({
     email: "",
     password: "",
@@ -24,21 +32,35 @@ const Login = () => {
   };
   const [signInWithEmailAndPassword, user, loading, error] =
     useSignInWithEmailAndPassword(auth);
+  const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
+
+  // condition
+  if (loading || sending) {
+    return <Loading></Loading>;
+  }
+
+  if (user) {
+    navigate(from, { replace: true });
+  }
+
+  if (error) {
+    setLoginInterAction(error);
+  }
+
   const handleLoginFormSubmit = (e) => {
     e.preventDefault();
-  };
-  const handleUserLogin = () => {
     const { email, password } = userLoginData;
     signInWithEmailAndPassword(email, password);
-    if (loading) {
-      setLoginInterAction("Loading....Please wait a momment");
-    }
-    if (error) {
-      console.log(error);
-      setLoginInterAction(error.message);
-    }
-    if (user) {
-      setLoginInterAction("");
+  };
+
+  //   reste  password
+  const resetPassword = async () => {
+    const { email } = userLoginData;
+    if (email) {
+      await sendPasswordResetEmail(email);
+      toast("We sent a Reset email");
+    } else {
+      toast("please enter your email address");
     }
   };
 
@@ -93,22 +115,30 @@ const Login = () => {
             <p className="mt-2">{loginInterAction}</p>
 
             <button
-              onClick={handleUserLogin}
               type="submit"
               className="w-full mt-6 bg-indigo-600 rounded-lg px-4 py-2 text-lg text-white tracking-wide font-semibold font-sans"
             >
               Login
             </button>
-            <p className="text-xl mt-4">
-              <span>
-                New meber?
-                <Link className="text-blue-500" to="/register">
-                  {" "}
-                  Register
-                </Link>{" "}
+            <div className="lg:flex justify-between mt-4 items-center">
+              <p className="text-xl lg:mb-0 mb-3 ">
+                <span>
+                  New meber?
+                  <Link className="text-blue-500" to="/register">
+                    {" "}
+                    Register
+                  </Link>{" "}
+                  here.
+                </span>
+              </p>
+              <p className="text-xl">
+                Forget Password?{" "}
+                <button className="text-blue-500" onClick={resetPassword}>
+                  Reset
+                </button>{" "}
                 here.
-              </span>
-            </p>
+              </p>
+            </div>
             {/* other signin in method  */}
             <div className="mt-3 border-b text-center">
               <div className="leading-none px-2 inline-block text-sm text-gray-600 tracking-wide font-medium bg-white transform translate-y-1/2">
@@ -167,6 +197,7 @@ const Login = () => {
             </div>
           </form>
         </div>
+        <ToastContainer />
       </div>
     </>
   );
