@@ -8,8 +8,8 @@ const Footer = () => {
           <div className="md:flex md:flex-wrap md:-mx-4 py-6 md:pb-12">
             <div className="footer-info lg:w-1/3 md:px-4">
               <h4 className="text-white text-2xl mb-4">
-                1.5K people doing coach per batch. RECOAC trying to making your
-                life healthy.
+                1.5K people doing coach per batch. RECOATCH trying to making
+                your life healthy.
               </h4>
               <p className="text-gray-400">
                 I teach everyone's carefully to achived their goal.
@@ -20,7 +20,7 @@ const Footer = () => {
                 </button>
                 <button className="bg-twitter py-2 px-4 text-white rounded ml-2 mt-2 transition-colors duration-300">
                   <span className="fab fa-twitter mr-2"></span> Follow
-                  @recoach25
+                  @recoatch25
                 </button>
               </div>
             </div>
@@ -114,7 +114,7 @@ const Footer = () => {
             <div className="md:flex md:-mx-4 md:items-center">
               <div className="md:flex-1 md:px-4 text-center md:text-left">
                 <p className="text-white">
-                  &copy; <strong>RECOCAH</strong>
+                  &copy; <strong>RECOTCAH</strong>
                 </p>
               </div>
               <div className="md:flex-1 md:px-4 text-center md:text-right">
