@@ -8,7 +8,6 @@ import auth from "../../../Firebase/firebase.init";
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [user] = useAuthState(auth);
-
   const handleSignOut = () => {
     signOut(auth);
   };
@@ -28,11 +27,6 @@ const Header = () => {
               {menuOpen ? <XIcon /> : <MenuIcon />}
             </button>
           </div>
-
-          {/* <div
-            className="hidden md:flex flex-col md:flex-row md:ml-auto mt-3 md:mt-0"
-            
-          > */}
           <nav
             className={`flex gap-6 md:ml-auto  justify-between md:justify-end items-center absolute w-full md:static flex-col md:flex-row transition delay-200 ease-in-out  z-10 bg-gray-800 ${
               menuOpen ? "top-[44px] left-0 w-full pb-5" : "top-[-500px]"
@@ -88,7 +82,14 @@ const Header = () => {
             >
               Contact
             </NavLink>
-            {user?.emailVerified ? (
+            {/* {user?.displayName ? (
+              <h1 className="text-xl text-yellow-200 font-semibold">
+                {user.displayName}
+              </h1>
+            ) : (
+              ""
+            )} */}
+            {user ? (
               <button
                 onClick={handleSignOut}
                 className="p-2 lg:px-4 md:mx-2 text-indigo-600 text-center border border-solid border-indigo-600 rounded  transition-colors duration-300 mt-1 md:mt-0 md:ml-1 hover:bg-indigo-600 hover:text-white"

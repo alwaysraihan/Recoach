@@ -4,20 +4,20 @@
     "name": "Weight Lose",
     "img": "https://i.ibb.co/q0Pcmmk/weetlose.png",
     "price": "2000",
-    "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit.Quod, eveniet?"
+    "description": "Weight loss is not the answer to every health problem, but if your doctor recommends it, there are tips to help you lose weight safely. A steady weight loss of 1 to 2 pounds per week is recommended for the most effective long-term weight management."
   },
   {
     "id": 2,
-    "name": "Weight Lose",
+    "name": "Meal Planning",
     "img": "https://i.ibb.co/pz17fQp/meal-Planing.png",
     "price": "3500",
-    "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit.Quod, eveniet?"
+    "description": "Are you in need of a weekly meal plan but can’t seem to find one that works for you? It’s your lucky day! Look through TONS of weekly meal plan ideas and find the one you’ve been searching for! Meal planning is a great way to ensure that you and your family maintain healthy eating habits."
   },
   {
     "id": 3,
-    "name": "Weight Lose",
+    "name": "Juice Detox",
     "img": "https://i.ibb.co/z5cxJ5N/juice-Detox.png",
     "price": "4800",
-    "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit.Quod, eveniet?"
+    "description": "Looking for new ways to be healthier and do better for your body? While there are many avenues you can take to do both, one of the most popular is to embark on a detoxing journey to reset.1 Where some people opt to skip the booze for a month, others make a commitment to their fruit and veggie intake."
   }
 ]

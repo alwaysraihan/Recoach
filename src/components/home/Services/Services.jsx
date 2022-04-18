@@ -28,8 +28,18 @@ const Services = () => {
                       <h1 className="text-2xl text-blue-500 font-bold">
                         {name}
                       </h1>
-                      <p className="mt-5 mb-2">{description}</p>
-                      <h2 className="mb-10">Price:$ {price}</h2>
+                      <p className="mt-5 mb-2">
+                        {description.slice(0, 280) + "... "}
+                        <span
+                          className="font-semibold text-gray-600"
+                          onClick={() => navigrate("/checkout")}
+                        >
+                          Read More
+                        </span>
+                      </p>
+                      <h2 className="mb-10 text-xl font-semibold ">
+                        Price:$ {price}
+                      </h2>
                       <div
                         className="mt-3 mb-5"
                         onClick={() => navigrate(`/checkout/${id}`)}

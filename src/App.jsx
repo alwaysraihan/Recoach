@@ -3,7 +3,6 @@ import Login from "./components/Authentication/Login";
 import SignUp from "./components/Authentication/SignUp";
 import Checkout from "./components/checkout/Checkout";
 import Home from "./components/home/Home";
-import Services from "./components/home/Services/Services";
 import PageNotFound from "./components/pageNotFound/PageNotFound";
 import RequireAuth from "./components/requireAuth/RequireAuth";
 import Footer from "./components/shared/Footer/Footer";

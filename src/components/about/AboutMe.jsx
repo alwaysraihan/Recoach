@@ -22,10 +22,11 @@ const AboutMe = () => {
               <h1 className="text-2xl font-semibold">
                 My Goal and how will I achive my Goal-
               </h1>
-              <p className="text-xl">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam
-                laborum non ad nesciunt soluta esse fugiat at est. Soluta
-                quisquam modi quae odit velit voluptatum.
+              <p className="text-xl mt-2">
+                My goal now is to be a full stack web developer and Android app
+                developer. I am now working hard and practicing more and more to
+                achieve my goals. And in the future I will work hard. I am
+                practicing with different projects to gain better skills.
               </p>
             </div>
           </div>
