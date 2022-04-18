@@ -3,7 +3,7 @@ import {
   useAuthState,
   useSendEmailVerification,
 } from "react-firebase-hooks/auth";
-import { Navigate, useLocation } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import auth from "../../Firebase/firebase.init";
@@ -11,7 +11,6 @@ import Loading from "../shared/Loading/Loading";
 
 const RequireAuth = ({ children }) => {
   const [user, loading] = useAuthState(auth);
-  const location = useLocation();
   const [sendEmailVerification, sending, error] =
     useSendEmailVerification(auth);
   if (loading) {
@@ -19,7 +18,7 @@ const RequireAuth = ({ children }) => {
   }
 
   if (!user) {
-    return <Navigate to="/login" state={{ from: location }} replace />;
+    return <Navigate to="/login" />;
   }
 
   if (!user.emailVerified) {

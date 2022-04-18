@@ -5,7 +5,7 @@ import {
   useSignInWithGoogle,
   useUpdateProfile,
 } from "react-firebase-hooks/auth";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import auth from "../../Firebase/firebase.init";
 import Loading from "../shared/Loading/Loading";
 
@@ -15,13 +15,11 @@ const SignUp = () => {
     email: "",
     password: "",
   });
-  const location = useLocation();
 
-  let from = location.state?.from?.pathname || "/";
   const navigate = useNavigate();
   const [signInWithGoogle] = useSignInWithGoogle(auth);
   const [signInWithGithub] = useSignInWithGithub(auth);
-  const [loginInterAction, setLoginInterAction] = useState("");
+  let errorText;
   let name, value;
   const getUserData = (e) => {
     name = e.target.name;
@@ -32,15 +30,19 @@ const SignUp = () => {
   const [createUserWithEmailAndPassword, user, loading, error] =
     useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
 
-  const [updateProfile, updating] = useUpdateProfile(auth);
-  if (error) {
-    setLoginInterAction(error?.message);
-  }
+  const [updateProfile, updating, updateError] = useUpdateProfile(auth);
   if (user) {
-    navigate(from, { replace: true });
+    navigate("/checkout");
   }
   if (loading || updating) {
     return <Loading></Loading>;
+  }
+  if (error || updateError) {
+    errorText = (
+      <p className="text-red-600">
+        Error: {error?.message || updateError?.message}
+      </p>
+    );
   }
 
   const handleRegister = async (event) => {
@@ -48,7 +50,6 @@ const SignUp = () => {
     const { name, email, password } = userLoginData;
     await createUserWithEmailAndPassword(email, password);
     await updateProfile({ displayName: name });
-    navigate("/");
   };
 
   return (
@@ -117,7 +118,6 @@ const SignUp = () => {
                 required
               />
             </div>
-            <p className="mt-2">{loginInterAction}</p>
 
             <button
               type="submit"
@@ -192,6 +192,7 @@ const SignUp = () => {
               </div>
             </div>
           </form>
+          {errorText}
         </div>
       </div>
     </>

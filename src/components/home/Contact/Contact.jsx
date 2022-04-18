@@ -1,6 +1,11 @@
 import React from "react";
+import { toast, ToastContainer } from "react-toastify";
 
 const Contact = () => {
+  const handleContact = (e) => {
+    e.preventDefault();
+    toast("Thanks. I recived your message.");
+  };
   return (
     <>
       <div>
@@ -14,12 +19,12 @@ const Contact = () => {
             </h3>
           </div>
 
-          <form className="w-full">
+          <form onSubmit={handleContact} className="w-full">
             <div className="flex flex-wrap -mx-3 mb-6">
               <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                 <label
                   className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-                  for="grid-first-name"
+                  htmlFor="grid-first-name"
                 >
                   First Name
                 </label>
@@ -27,13 +32,14 @@ const Contact = () => {
                   className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
                   id="grid-first-name"
                   type="text"
+                  required
                   placeholder="Jane"
                 />
               </div>
               <div className="w-full md:w-1/2 px-3">
                 <label
                   className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-                  for="grid-last-name"
+                  htmlFor="grid-last-name"
                 >
                   Last Name
                 </label>
@@ -42,6 +48,7 @@ const Contact = () => {
                   id="grid-last-name"
                   type="text"
                   placeholder="Doe"
+                  required
                 />
               </div>
             </div>
@@ -49,7 +56,7 @@ const Contact = () => {
               <div className="w-full px-3">
                 <label
                   className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-                  for="grid-password"
+                  htmlFor="grid-password"
                 >
                   Email Address
                 </label>
@@ -58,6 +65,7 @@ const Contact = () => {
                   id="grid-email"
                   type="email"
                   placeholder="********@*****.**"
+                  required
                 />
               </div>
             </div>
@@ -66,13 +74,14 @@ const Contact = () => {
               <div className="w-full px-3">
                 <label
                   className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-                  for="grid-password"
+                  htmlFor="grid-password"
                 >
                   Your Message
                 </label>
                 <textarea
                   rows="10"
                   className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                  required
                 ></textarea>
               </div>
               <div className="flex justify-between w-full px-3">
@@ -92,6 +101,7 @@ const Contact = () => {
             </div>
           </form>
         </div>
+        <ToastContainer />
       </div>
     </>
   );

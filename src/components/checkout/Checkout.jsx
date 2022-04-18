@@ -1,6 +1,7 @@
 import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../../Firebase/firebase.init";
 import orderImg from "../../assets/images/weetlose.jpg";
+import { toast, ToastContainer } from "react-toastify";
 
 const Checkout = () => {
   const [user] = useAuthState(auth);
@@ -60,11 +61,17 @@ const Checkout = () => {
                 </div>
               </div>
             </div>
-            <button className="px-4 py-4 bg-purple-700 text-white w-full mt-3 rounded shadow font-bold hover:bg-purple-900">
+            <button
+              onClick={() => {
+                toast("Your Registration Payment Successfully Placed");
+              }}
+              className="px-4 py-4 bg-purple-700 text-white w-full mt-3 rounded shadow font-bold hover:bg-purple-900"
+            >
               PROCEED TO CHECKOUT
             </button>
           </div>
         </div>
+        <ToastContainer />
       </div>
     </>
   );

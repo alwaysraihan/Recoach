@@ -4,7 +4,6 @@ const Services = () => {
   const navigrate = useNavigate();
 
   const [services] = useServicesData();
-  console.log(services);
 
   return (
     <>
