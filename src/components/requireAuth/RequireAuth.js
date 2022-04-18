@@ -41,7 +41,8 @@ const RequireAuth = ({ children }) => {
                   toast("We Sent a email");
                 }
                 if (error) {
-                  toast("Something went wrong");
+                  console.log(error);
+                  toast("maybe try many time or Something went wrong");
                 }
               }}
             >

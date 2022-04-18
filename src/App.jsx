@@ -10,6 +10,7 @@ import Footer from "./components/shared/Footer/Footer";
 import Header from "./components/shared/Header/Header";
 import AboutMe from "./components/about/AboutMe";
 import Contact from "./components/home/Contact/Contact";
+import Blogs from "./components/blogs/Blogs";
 function App() {
   return (
     <>
@@ -17,7 +18,7 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/services" element={<Services />} />
+          <Route path="/blogs" element={<Blogs />} />
           <Route path="/about" element={<AboutMe />} />
 
           <Route
