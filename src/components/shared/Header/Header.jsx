@@ -18,7 +18,7 @@ const Header = () => {
         <div className="container px-4 md:px-0 lg:px-4  mx-auto md:flex md:items-center">
           <div className="flex justify-between items-center">
             <Link to="/" className="font-bold text-xl text-indigo-600">
-              FWR
+              RECOATCH
             </Link>
             <button
               onClick={() => setMenuOpen(!menuOpen)}

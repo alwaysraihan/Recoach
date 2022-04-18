@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "name": "Weight Lose",
+    "img": "https://i.ibb.co/q0Pcmmk/weetlose.png",
+    "price": "2000",
+    "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit.Quod, eveniet?"
+  },
+  {
+    "id": 2,
+    "name": "Weight Lose",
+    "img": "https://i.ibb.co/pz17fQp/meal-Planing.png",
+    "price": "3500",
+    "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit.Quod, eveniet?"
+  },
+  {
+    "id": 3,
+    "name": "Weight Lose",
+    "img": "https://i.ibb.co/z5cxJ5N/juice-Detox.png",
+    "price": "4800",
+    "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit.Quod, eveniet?"
+  }
+]

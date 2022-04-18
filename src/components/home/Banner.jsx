@@ -1,6 +1,8 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import backgroundImage from "../../assets/images/bg.jpg";
 const Banner = () => {
+  const navigrate = useNavigate();
   return (
     <>
       <div
@@ -22,6 +24,7 @@ const Banner = () => {
             <button
               type="button"
               className=" text-white bg-green-700 hover:bg-green-800 foc font-medium rounded-full text-sm px-7 py-3.5 mr-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800"
+              onClick={() => navigrate("/contact")}
             >
               Contact Now
             </button>
