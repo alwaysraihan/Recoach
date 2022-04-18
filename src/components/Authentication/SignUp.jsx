@@ -5,7 +5,7 @@ import {
   useSignInWithGoogle,
   useUpdateProfile,
 } from "react-firebase-hooks/auth";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import auth from "../../Firebase/firebase.init";
 import Loading from "../shared/Loading/Loading";
 
@@ -15,6 +15,9 @@ const SignUp = () => {
     email: "",
     password: "",
   });
+  const location = useLocation();
+
+  let from = location.state?.from?.pathname || "/";
   const navigate = useNavigate();
   const [signInWithGoogle] = useSignInWithGoogle(auth);
   const [signInWithGithub] = useSignInWithGithub(auth);
@@ -29,7 +32,13 @@ const SignUp = () => {
   const [createUserWithEmailAndPassword, user, loading, error] =
     useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
 
-  const [updateProfile, updating, updateError] = useUpdateProfile(auth);
+  const [updateProfile, updating] = useUpdateProfile(auth);
+  if (error) {
+    setLoginInterAction(error?.message);
+  }
+  if (user) {
+    navigate(from, { replace: true });
+  }
   if (loading || updating) {
     return <Loading></Loading>;
   }

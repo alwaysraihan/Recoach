@@ -8,10 +8,11 @@ const Footer = () => {
           <div className="md:flex md:flex-wrap md:-mx-4 py-6 md:pb-12">
             <div className="footer-info lg:w-1/3 md:px-4">
               <h4 className="text-white text-2xl mb-4">
-                19K users are using FWR blocks and making their life easy.
+                1.5K people doing coach per batch. RECOAC trying to making your
+                life healthy.
               </h4>
               <p className="text-gray-400">
-                We have carefully crafted the blocks to suit to everyone's need.
+                I teach everyone's carefully to achived their goal.
               </p>
               <div className="mt-4">
                 <button className="bg-facebook py-2 px-4 text-white rounded mt-2 transition-colors duration-300">
@@ -19,7 +20,7 @@ const Footer = () => {
                 </button>
                 <button className="bg-twitter py-2 px-4 text-white rounded ml-2 mt-2 transition-colors duration-300">
                   <span className="fab fa-twitter mr-2"></span> Follow
-                  @freeweb19
+                  @recoach25
                 </button>
               </div>
             </div>
@@ -35,19 +36,19 @@ const Footer = () => {
                       href="/"
                       className="text-gray-400 py-1 block hover:underline"
                     >
-                      Company
+                      My Lifestyle
                     </a>
                     <a
                       href="/"
                       className="text-gray-400 py-1 block hover:underline"
                     >
-                      Culture
+                      Blogs
                     </a>
                     <a
                       href="/"
                       className="text-gray-400 py-1 block hover:underline"
                     >
-                      Team
+                      Videos
                     </a>
                     <a
                       href="/"
@@ -59,38 +60,38 @@ const Footer = () => {
                 </div>
                 <div className="sm:flex-1 mt-4 sm:mt-0">
                   <h6 className="text-base font-medium text-white uppercase mb-2">
-                    What we offer
+                    What I offer
                   </h6>
                   <div>
                     <a
                       href="/"
                       className="text-gray-400 py-1 block hover:underline"
                     >
-                      Blocks
+                      Weight Lose
                     </a>
                     <a
                       href="/"
                       className="text-gray-400 py-1 block hover:underline"
                     >
-                      Resources
+                      Happy Life
                     </a>
                     <a
                       href="/"
                       className="text-gray-400 py-1 block hover:underline"
                     >
-                      Tools
+                      Motivation
                     </a>
                     <a
                       href="/"
                       className="text-gray-400 py-1 block hover:underline"
                     >
-                      Tutorials
+                      Achived Goal
                     </a>
                     <a
                       href="/"
                       className="text-gray-400 py-1 block hover:underline"
                     >
-                      Freebies
+                      Fittnes
                     </a>
                   </div>
                 </div>
@@ -99,10 +100,10 @@ const Footer = () => {
 
             <div className="md:w-1/3 md:px-4 md:text-center mt-12 lg:mt-0">
               <h5 className="text-lg text-white font-medium mb-4">
-                Explore our site
+                Dowlod Mobile App
               </h5>
               <button className="bg-indigo-600 text-white hover:bg-indigo-700 rounded py-2 px-6 md:px-12 transition-colors duration-300">
-                Explore
+                Downlod
               </button>
             </div>
           </div>
@@ -113,7 +114,7 @@ const Footer = () => {
             <div className="md:flex md:-mx-4 md:items-center">
               <div className="md:flex-1 md:px-4 text-center md:text-left">
                 <p className="text-white">
-                  &copy; <strong>FWR</strong>
+                  &copy; <strong>RECOCAH</strong>
                 </p>
               </div>
               <div className="md:flex-1 md:px-4 text-center md:text-right">

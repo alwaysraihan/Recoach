@@ -5,6 +5,7 @@ import {
 } from "react-firebase-hooks/auth";
 import { Navigate, useLocation } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import auth from "../../Firebase/firebase.init";
 import Loading from "../shared/Loading/Loading";
 
@@ -37,7 +38,12 @@ const RequireAuth = ({ children }) => {
               className="text-blue-500"
               onClick={async () => {
                 await sendEmailVerification();
-                toast("Sent email");
+                if (sending) {
+                  toast("We Sent a email");
+                }
+                if (error) {
+                  toast("Something went wrong");
+                }
               }}
             >
               Send a verification email again
