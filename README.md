@@ -13,6 +13,7 @@ This website was created for an individual health coach. Here she showcase her s
 - Responsive Navbar
 - Protected Router
 - Conatact form
+- use-Firebase-Hooks
 - Firebase email verification system
 - Firebase reset password system
 
